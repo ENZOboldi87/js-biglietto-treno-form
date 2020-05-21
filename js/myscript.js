@@ -12,6 +12,7 @@ var formEta = document.getElementById('form-eta');
 var formNomeValue;
 var formKmValue;
 var formEtaValue;
+var formOffertaValue = ' Tariffa standard';
 
 // tickets element
 var biglNome = document.getElementById('bigli-nome');
@@ -25,8 +26,6 @@ buttonGenera.addEventListener('click',
   function() {
     formKmValue = formKm.value;
     formEtaValue = formEta.value;
-    console.log(formEtaValue);
-    console.log(formKmValue);
 
     // gestione elaborazione biglietto
     // var formNome = document.getElementById('generaBiglietto').value;
@@ -35,20 +34,24 @@ buttonGenera.addEventListener('click',
     var prezzo = formKmValue * 0.21;
 
     // calcolo sconti
-    if (formEtaValue == 'Minorenne') {
-      prezzo = prezzo - (prezzo * 20 / 100);
-      offerta = 'Hai il 20% di sconto';
+    if (formEtaValue == 'Min') {
+      prezzo = prezzo - ( prezzo * 20 / 100 );
+      formOffertaValue = ' hai ottenuto uno sconto del 20%';
+
     }
-    else if (formEtaValue == 'Senior') {
-      prezzo = prezzo - (prezzo * 40 / 100);
-      offerta = 'hai il 40% di sconto';
+
+    else if (formEtaValue == 'Sen') {
+      prezzo = prezzo - ( prezzo * 40 / 100 );
+      formOffertaValue = ' hai ottenuto uno sconto del 40%';
     }
 
     // compilazione biglietto
 
     biglNome.innerHTML = formNome.value;
-    biglCosto.innerHTML = prezzo.toFixed(2) + 'Euro'
-    biglOfferta.innerHTML = offerta;
+    biglCosto.innerHTML = prezzo.toFixed(2) + ' Euro';
+    biglOfferta.innerHTML = formOffertaValue;
+    biglCarrozza.innerHTML = Math.floor(Math.random() * 10) + 1;
+    biglCodiceCp.innerHTML = Math.floor(Math.random() * (100000 - 9000)) + 1;
 
   }
 );
@@ -56,14 +59,13 @@ buttonGenera.addEventListener('click',
 // evento annulla
 buttonAnnulla.addEventListener('click',
   function() {
-    // gestione annullamento nome
+    // erase values
     formNome.value = '';
     biglNome.innerHTML = '';
-    // gestione annullamento km
-    biglKm.value = '';
+    formKm.value = '';
     formEta.value = 'Mag';
-    // gestione annullamento biglOfferta
     biglOfferta.innerHTML = '';
+    biglCosto.innerHTML= '';
 
     // sezioneBiglietto.className = 'd-none';
   }
