@@ -18,3 +18,25 @@ body {
 #ticket {
   display: hidden;
 } */
+
+
+label {
+  /* padding: 20px 0; */
+  width: 100%;
+}
+
+.form-control {
+  display: inline-block;
+  width: inherit;
+}
+
+#form-km {
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  }
+
+.buttons {
+  padding: 10px 10px;
+}
