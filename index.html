@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>BooleanTrain</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="text_header text-center">
+          <h1>Trenitalia</h1>
+          <h2>TICKET PRICE CALCULATOR</h2>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="compile_ticket">
+        <div class="container">
+          <div class="content_ticket">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="form-group text-center">
+                <label>Nome Cognome</label>
+                <input id="form-nome" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group text-center">
+                  <label>Km da percorrere</label>
+                  <input  id="form-km"type="number"  name="quantity">
+                </div>
+              </div>
+            <div class="col-lg-4">
+                <div class="form-group text-center">
+                  <label>Eta'</label>
+                  <select class="form-control" id="form-eta">
+                    <option value="Min">Minorenne</option>
+                    <option value="Mag">Maggiorenne</option>
+                    <option value="Sen">Senior</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+                <div class="col-lg-12">
+                  <div class="buttons text-center">
+                    <button id="generaBiglietto" type="button" >clicca qui </button>
+                    <button id="annulla" type="button" >clicca li </button>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section id="prova">
+        <div class="container">
+          <h2>il tuo biglietto</h2>
+          <div class="content_ticket">
+              <p>nome passeggero <span id="bigli-nome"></span> </p>
+              <p>offerta<span id="bigli-offerta"></span> </p></p>
+              <p>carrozza<span id="bigli-carrozza"></span> </p></p>
+              <p>codice cp<span id="bigli-cp"></span> </p></p>
+              <p>costo<span id="bigli-costo"></span> </p></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="js/myscript.js" charset="utf-8"></script>
+  </body>
+</html>

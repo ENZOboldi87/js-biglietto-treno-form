@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ae1645;
+  color: #fff;
+}
+
+.content_ticket {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+/*
+#ticket {
+  display: hidden;
+} */
