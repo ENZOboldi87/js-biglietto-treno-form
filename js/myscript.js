@@ -21,15 +21,12 @@ var biglCarrozza = document.getElementById('bigli-carrozza');
 var biglCodiceCp = document.getElementById('bigli-cp');
 var biglCosto = document.getElementById('bigli-costo');
 
-// evento quando si clicca su genera biglietto
+// ticket compiler button
 buttonGenera.addEventListener('click',
   function() {
     sezioneBiglietto.className = 'd-block';
     formKmValue = formKm.value;
     formEtaValue = formEta.value;
-
-    // gestione elaborazione biglietto
-    // var formNome = document.getElementById('generaBiglietto').value;
 
     // calcolo prezzo
     var prezzo = formKmValue * 0.21;
@@ -57,7 +54,7 @@ buttonGenera.addEventListener('click',
   }
 );
 
-// evento annulla
+// button annulla
 buttonAnnulla.addEventListener('click',
   function() {
     // erase values
@@ -69,6 +66,6 @@ buttonAnnulla.addEventListener('click',
     biglCosto.innerHTML= '';
     sezioneBiglietto.className = 'd-none';
 
-    // sezioneBiglietto.className = 'd-none';
+
   }
 );
