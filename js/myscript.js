@@ -61,7 +61,6 @@ buttonAnnulla.addEventListener('click',
     formNome.value = '';
     formKm.value = '';
     formEta.value = 'Empty';
-    console.log(formEta);
     biglOfferta.innerHTML = '';
     biglCosto.innerHTML= '';
     sezioneBiglietto.className = 'd-none';
