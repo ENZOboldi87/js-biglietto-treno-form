@@ -1,6 +1,9 @@
 //  ticket result
 var sezioneBiglietto = document.getElementById('result-ticket');
 
+// missing values
+var erroreDatiImmessi = document.getElementById('missing-values');
+
 // form name element
 var buttonGenera = document.getElementById('generaBiglietto');
 var buttonAnnulla = document.getElementById('annulla')
@@ -9,7 +12,6 @@ var formKm = document.getElementById('form-km');
 var formEta = document.getElementById('form-eta');
 
 // others variables
-var formNomeValue;
 var formKmValue;
 var formEtaValue;
 var formOffertaValue = 'Tariffa Standard';
@@ -24,14 +26,22 @@ var biglCosto = document.getElementById('bigli-costo');
 // ticket compiler button
 buttonGenera.addEventListener('click',
   function() {
+    erroreDatiImmessi.className = 'd-none';
     sezioneBiglietto.className = 'd-block';
     formKmValue = parseInt(formKm.value);
     formEtaValue = formEta.value;
 
-    // calcolo prezzo
+    // price calculator
     var prezzo = formKmValue * 0.21;
 
-    // calcolo sconti
+    // in case of missing values
+    if ((formNome.value == '') || (isNaN(formKmValue))) {
+      erroreDatiImmessi.className = 'd-block';
+      sezioneBiglietto.className = 'd-none';
+
+    }
+
+    // discount calculator
     if (formEtaValue == 'Min') {
       prezzo = prezzo - ( prezzo * 20 / 100 );
       formOffertaValue = ' Sconto Young';
@@ -43,7 +53,7 @@ buttonGenera.addEventListener('click',
       formOffertaValue = ' Sconto Senior';
     }
 
-    // compilazione biglietto
+    // compiling ticket
 
     biglNome.innerHTML = formNome.value;
     biglCosto.innerHTML = prezzo.toFixed(2) + ' Euro';
@@ -64,6 +74,7 @@ buttonAnnulla.addEventListener('click',
     biglOfferta.innerHTML = '';
     biglCosto.innerHTML= '';
     sezioneBiglietto.className = 'd-none';
+    erroreDatiImmessi.className = 'd-none';
 
 
   }
