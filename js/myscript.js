@@ -36,7 +36,7 @@ buttonGenera.addEventListener('click',
     var prezzo = formKmValue * 0.21;
 
     // in case of missing values
-    if (((formNome.value == '') || ( formEtaValue = 'Empty')) || (isNaN(formKmValue))) {
+    if (((formNome.value == '') || ( formEtaValue === 'Empty' )) || (isNaN(formKmValue))) {
       erroreDatiImmessi.className = 'd-block';
       sezioneBiglietto.className = 'd-none';
 
