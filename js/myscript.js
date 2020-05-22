@@ -14,7 +14,8 @@ var formEta = document.getElementById('form-eta');
 // others variables
 var formKmValue;
 var formEtaValue;
-var formOffertaValue = 'Tariffa Standard';
+var formOffertaValue;
+
 
 // tickets element
 var biglNome = document.getElementById('bigli-nome');
@@ -35,7 +36,7 @@ buttonGenera.addEventListener('click',
     var prezzo = formKmValue * 0.21;
 
     // in case of missing values
-    if ((formNome.value == '') || (isNaN(formKmValue))) {
+    if (((formNome.value == '') || ( formEtaValue = 'Empty')) || (isNaN(formKmValue))) {
       erroreDatiImmessi.className = 'd-block';
       sezioneBiglietto.className = 'd-none';
 
@@ -52,6 +53,13 @@ buttonGenera.addEventListener('click',
       prezzo = prezzo - ( prezzo * 40 / 100 );
       formOffertaValue = ' Sconto Senior';
     }
+
+    else if (formEtaValue == 'Mag') {
+      formOffertaValue = 'Tariffa Standard';
+
+    }
+
+
 
     // compiling ticket
 
