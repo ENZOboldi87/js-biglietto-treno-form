@@ -25,7 +25,7 @@ var biglCosto = document.getElementById('bigli-costo');
 buttonGenera.addEventListener('click',
   function() {
     sezioneBiglietto.className = 'd-block';
-    formKmValue = formKm.value;
+    formKmValue = parseInt(formKm.value);
     formEtaValue = formEta.value;
 
     // calcolo prezzo
@@ -59,9 +59,9 @@ buttonAnnulla.addEventListener('click',
   function() {
     // erase values
     formNome.value = '';
-    biglNome.innerHTML = '';
     formKm.value = '';
-    formEta.value = '';
+    formEta.value = 'Empty';
+    console.log(formEta);
     biglOfferta.innerHTML = '';
     biglCosto.innerHTML= '';
     sezioneBiglietto.className = 'd-none';
