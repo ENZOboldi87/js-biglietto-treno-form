@@ -6,7 +6,7 @@ var erroreDatiImmessi = document.getElementById('missing-values');
 
 // form name element
 var buttonGenera = document.getElementById('generaBiglietto');
-var buttonAnnulla = document.getElementById('annulla')
+var buttonAnnulla = document.getElementById('annulla');
 var formNome = document.getElementById('form-nome');
 var formKm = document.getElementById('form-km');
 var formEta = document.getElementById('form-eta');
@@ -36,10 +36,9 @@ buttonGenera.addEventListener('click',
     var prezzo = formKmValue * 0.21;
 
     // in case of missing values
-    if (((formNome.value == '') || ( formEtaValue === 'Empty' )) || (isNaN(formKmValue))) {
+    if (((formNome.value === '') || ( formEtaValue === 'Empty' )) || (isNaN(formKmValue))) {
       erroreDatiImmessi.className = 'd-block';
       sezioneBiglietto.className = 'd-none';
-
     }
 
     // discount calculator
@@ -56,7 +55,6 @@ buttonGenera.addEventListener('click',
 
     else if (formEtaValue == 'Mag') {
       formOffertaValue = 'Tariffa Standard';
-
     }
 
 
@@ -68,7 +66,6 @@ buttonGenera.addEventListener('click',
     biglOfferta.innerHTML = formOffertaValue;
     biglCarrozza.innerHTML = Math.floor(Math.random() * 10) + 1;
     biglCodiceCp.innerHTML = Math.floor(Math.random() * (100000 - 9000)) + 1;
-
   }
 );
 
@@ -83,7 +80,5 @@ buttonAnnulla.addEventListener('click',
     biglCosto.innerHTML= '';
     sezioneBiglietto.className = 'd-none';
     erroreDatiImmessi.className = 'd-none';
-
-
   }
 );

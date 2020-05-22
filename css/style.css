@@ -37,7 +37,7 @@ label {
   border: 1px solid #ced4da;
   border-radius: .25rem;
   width: 50%;
-  }
+}
 
 .buttons {
   padding: 10px 10px;
@@ -55,7 +55,6 @@ label {
   background: grey;
   min-width: 185px;
   min-height: 100%;
-
 }
 
 .content_ticket-result {
