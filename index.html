@@ -9,6 +9,7 @@
     <title>BooleanTrain</title>
   </head>
   <body>
+    <!-- header -->
     <header>
       <div class="container">
         <div class="text_header text-center">
@@ -17,7 +18,10 @@
         </div>
       </div>
     </header>
+    <!-- header ends -->
+    <!-- main -->
     <main>
+      <!-- ticket compiler -->
       <section class="compile_ticket">
         <div class="container">
           <div class="content_ticket">
@@ -31,13 +35,14 @@
             <div class="col-lg-4">
                 <div class="form-group text-center">
                   <label>Km da percorrere</label>
-                  <input  id="form-km"type="number"  name="quantity">
+                  <input id="form-km"type="number"  name="quantity">
                 </div>
               </div>
             <div class="col-lg-4">
                 <div class="form-group text-center">
                   <label>Eta'</label>
                   <select class="form-control" id="form-eta">
+                    <option value=""></option>
                     <option value="Min">Minorenne</option>
                     <option value="Mag">Maggiorenne</option>
                     <option value="Sen">Senior</option>
@@ -56,19 +61,71 @@
           </div>
         </div>
       </section>
-      <section id="prova">
+      <!-- ends ticket compiler -->
+      <!-- ticket result -->
+      <section id="result-ticket">
         <div class="container">
-          <h2>il tuo biglietto</h2>
-          <div class="content_ticket">
-              <p>nome passeggero <span id="bigli-nome"></span> </p>
-              <p>offerta <span id="bigli-offerta"></span> </p></p>
-              <p>carrozza <span id="bigli-carrozza"></span> </p></p>
-              <p>codice cp <span id="bigli-cp"></span> </p></p>
-              <p>costo <span id="bigli-costo"></span> </p></p>
+          <h2 class="text-center">il tuo biglietto</h2>
+          <div class="content_ticket-result">
+            <h6>DETTAGLIO PASSEGGERI</h6>
+              <div class="box-content-ticket-result">
+                <div class="row">
+                  <div class="col-lg-2">
+                    <div class="box-passeggeri">
+                      <div class="content-text">
+                        <p class="font-weight-bold">NOME PASSEGGERO</p>
+                        <span id="bigli-nome" class="text-truncate"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div class="box-offerta">
+                      <div class="content-text">
+
+
+                      <p class="font-weight-bold">Offerta</p>
+                        <span id="bigli-offerta"></span>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div class="box-carrozza">
+                      <div class="content-text">
+
+
+                      <p class="font-weight-bold">Carrozza</p>
+                      <span id="bigli-carrozza"></span>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div class="box-codicecp">
+                      <div class="content-text">
+
+
+                      <p class="font-weight-bold">Codice CP </p>
+                        <span id="bigli-cp"></span>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div class="box-costo">
+                      <div class="content-text">
+
+
+                      <p class="font-weight-bold">Costo biglietto</p>
+                        <span id="bigli-costo"></span>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </section>
+      <!-- ends ticket result -->
     </main>
+    <!-- ends main -->
     <footer>
     </footer>
     <script src="js/myscript.js" charset="utf-8"></script>

@@ -1,3 +1,4 @@
+/* general rules */
 * {
   margin: 0;
   padding: 0;
@@ -8,21 +9,21 @@ body {
   background-color: #ae1645;
   color: #fff;
 }
+/* ends general rules */
 
+/* ticket compiler */
 .content_ticket {
   background-color: white;
   color: black;
   border-radius: 10px;
+  -webkit-box-shadow: 6px -4px 16px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px -4px 16px -5px rgba(0,0,0,0.75);
+  box-shadow: 6px -4px 16px -5px rgba(0,0,0,0.75);
 }
-/*
-#ticket {
-  display: hidden;
-} */
-
 
 label {
-  /* padding: 20px 0; */
   width: 100%;
+  padding-top: 15px;
 }
 
 .form-control {
@@ -35,8 +36,44 @@ label {
   padding: .375rem .75rem;
   border: 1px solid #ced4da;
   border-radius: .25rem;
+  width: 50%;
   }
 
 .buttons {
   padding: 10px 10px;
 }
+/* ends ticket compiler */
+
+/* ticket result */
+.box-content-ticket-result {
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  margin: 0 10px;
+}
+
+.box-passeggeri {
+  background: grey;
+  min-width: 185px;
+  min-height: 100%;
+
+}
+
+.content_ticket-result {
+  background-color: white;
+  color: black;
+  min-height: 160px;
+}
+
+h6 {
+  padding: 10px 15px 0px 15px;
+  margin: 0 auto;
+}
+
+.content-text {
+  padding: 10px 5px;
+}
+
+#result-ticket {
+  display: none;
+}
+/* ends ticket result */
